@@ -1,0 +1,48 @@
+@import "variables";
+
+body {
+    background-color: $background-page;
+    font-family: $font;
+}
+
+.card {
+    position: relative;
+    background-color: $base-color;
+    height:300px;
+    width: 350px;
+    padding: 40px;
+    border-bottom: 200px solid $footer-testimonial;
+    border-radius: 5%;
+    box-shadow: 10px 10px 12px -7px rgba(5,5,5,0.38);
+&__text {
+    line-height: 40px;
+    font-size: 20px;
+}
+&__image{
+    position: relative;
+    border: 6px solid $base-color;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    top:-10px;
+    left: 110px;   
+}
+&__title {
+    text-transform: uppercase;
+    color: $base-color;
+    position: relative;
+    left: 120px;
+    font-size: 20px;
+    top: -10px;
+    line-height: 15px;
+}
+&__title::after {
+    content:"SomeWebsite.com";
+    position: absolute;
+    left: -30px;
+    text-transform: lowercase;
+    text-align: center;
+    opacity: 0.4;
+}
+}
