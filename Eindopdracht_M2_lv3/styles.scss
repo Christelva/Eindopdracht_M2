@@ -1,0 +1,70 @@
+@import "mixin";
+@import "variables";
+
+body {
+  background-color: $bg-color;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.socialmedia  {
+  position: absolute;
+  top: 25%;
+  right: 20%;
+  transform: translate(110%, 20%);
+}
+.socialmedia * {
+  color: $letter-color;
+  font-size: 22px;
+  display:block;
+  width: 400px;
+  padding: 30px 0px 30px 0px; 
+  transition: 300ms all;
+  margin-left: 230px;
+}
+
+.socialmedia *:hover {
+  margin-left: -50px;
+  }
+  .socialmedia__blog{ 
+    background-color: $blog-color;
+  }
+  .socialmedia__facebook {
+    background-color: $fb-color;
+  }
+  .socialmedia__twitter {
+    background-color: $twit-color;
+  }
+  .socialmedia__github {
+    background-color: $gh-color;
+}
+  .socialmedia__linkedin {
+    background-color: $li-color;
+}
+
+.socialmedia__blog::before {
+  @include icon;
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f5fc"; margin-left: -10px;
+  }
+.socialmedia__twitter::before {
+  @include icon;
+  font-family: "Font Awesome 5 Brands"; font-weight: 900; content: "\f099"; margin-left: -10px;
+  } 
+.socialmedia__linkedin::before {
+  @include icon;
+  font-family: "Font Awesome 5 Brands"; font-weight: 900; content: "\f0e1";
+  } 
+.socialmedia__facebook::before {
+  @include icon;
+  font-family: "Font Awesome 5 Brands"; font-weight: 900; content: "\f39e";
+
+  } 
+.socialmedia__github::before {
+    @include icon;
+    font-family: "Font Awesome 5 Brands"; font-weight: 100; content: "\f09b";
+    }     
+
+.socialmedia *:hover {
+  left: 0;
+}
