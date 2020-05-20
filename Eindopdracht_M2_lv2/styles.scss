@@ -1,0 +1,74 @@
+@import "media";
+@import "variables";
+
+html {
+  background-color: $bg-color;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: column wrap;
+  &__item{
+    background-image:$gallery-img;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border:  10px solid white;
+    border-radius: 3%;
+    margin: 20px;
+    transition: opacity 2s;
+    object-fit: contain;
+    background-size: contain;  
+  }
+  &__button {
+    color: white;
+    background-color: darkblue;
+    position: relative;
+    font-size: 15px;
+    padding: 5px 20px;
+    border: 2px dotted white;
+    border-radius: 5%;
+     left: 170px;
+     top: 170px;
+     opacity: 0;
+  }
+  &__item:hover {
+    opacity: 0.2;
+  }
+  &__item:hover > &__button{
+    opacity: 1;
+  } 
+}
+
+@media screen and (min-width: 600px){
+  .container{ 
+  @include media;
+  &__item {
+  width: 330px;
+  height: 330px; 
+    }
+    &__button {
+      position: relative;
+      left: 130px;
+      top: 150px;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px){
+  .container {
+    @include media;
+    max-width: 1000px;
+    &__item {
+      width: 250px;
+      height: 250px;
+    }
+    &__button {
+      position: relative;
+      left: 90px;
+      top: 120px;
+    }
+  }
+}
